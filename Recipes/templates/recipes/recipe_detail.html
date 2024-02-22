@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+<div>
+    <h1>Название рецепта: {{ recipe.title }}</h1>
+    <p>Описание рецепта: {{ recipe.description }}</p>
+
+    <p>Время притоготовления: {{ recipe.preparation_time}} минут</p>
+    <br>
+
+    {% for ingredient in ingredients %}
+
+    <p>Ингредиенты: {{ ingredient.recipes }}</p>
+
+    {% endfor%}
+
+    <br>
+    {% for instruction in instructions %}
+
+    <p>Инструкции: {{ instruction.recipes }}</p>
+
+    {% endfor %}
+
+</div>
+{% endblock main %}
